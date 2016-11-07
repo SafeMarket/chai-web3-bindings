@@ -34,6 +34,9 @@ chai.use(require('chai-web3-bindings')(web3))
 ### ascii
 `expect('0x74657374').to.be.ascii('test')`
 
+### bytes
+`expect('0x74657374').to.be.bytes(4)`
+
 ## Running tests
 
 Install dev dependencies:
