@@ -48,4 +48,14 @@ describe('chai web3 bindings', () => {
     expect('0x007465737500').to.not.be.ascii('test')
   })
 
+  it('should have bytes method', () => {
+    expect('0x').to.be.bytes(0)
+    expect('0x0').to.be.bytes(1)
+    expect('0x00').to.be.bytes(1)
+    expect('0x746573744').to.be.bytes(5)
+    expect('00').to.not.be.bytes(32)
+    expect('0x746573744').to.not.be.bytes(4)
+    expect('0x746573744').to.not.be.bytes(6)
+  })
+
 })

@@ -50,7 +50,23 @@ module.exports = function chaiWeb3Bindings(web3) {
         ascii
       )
     })
+
+    Assertion.addMethod('bytes', function addContractPropertyProperty(bytesLength) {
+      
+      const _bytesLength = Math.ceil((this._obj.length - 2) / 2)
+
+      this.assert(
+        _bytesLength === bytesLength,
+        'expected #{this} to be bytes#{exp} but got bytes#{act}',
+        'expected #{this} to not be ascii equal #{exp} but got #{act}',
+        bytesLength,
+        _bytesLength 
+      )
+
+    })
+
   }
+  
 
   function isZeros(thing) {
     return (
