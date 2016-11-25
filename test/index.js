@@ -2,9 +2,7 @@
 
 const chai = require('chai')
 const expect = chai.expect
-const Web3 = require('web3')
-const web3 = new Web3
-chai.use(require('../')(web3))
+chai.use(require('../'))
 
 describe('chai web3 bindings', () => {
 

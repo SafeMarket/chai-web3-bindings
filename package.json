@@ -18,7 +18,9 @@
   "homepage": "https://github.com/SafeMarket/chai-web3-bindings#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.1.2",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {
     "web3": "^0.17.0-beta"
   }
 }
