@@ -5,7 +5,7 @@ module.exports = function chaiWeb3Bindings(web3) {
 
     const Assertion = chai.Assertion
 
-    Assertion.addProperty('hex', function addHexProperty() {
+    Assertion.addMethod('hex', function addHexProperty() {
       this.assert(
         web3.toHex(this._obj) === this._obj,
         'expected #{this} to be a hex string',
@@ -13,7 +13,7 @@ module.exports = function chaiWeb3Bindings(web3) {
       )
     })
 
-    Assertion.addProperty('address', function addAddressProperty() {
+    Assertion.addMethod('address', function addAddressProperty() {
       this.assert(
         web3.isAddress(this._obj),
         'expected #{this} to be an address',
@@ -21,7 +21,7 @@ module.exports = function chaiWeb3Bindings(web3) {
       )
     })
 
-    Assertion.addProperty('zeros', function addZerosProperty() {
+    Assertion.addMethod('zeros', function addZerosProperty() {
       this.assert(
         isZeros(this._obj),
         'expected #{this} to be a string of 00 bytes',
@@ -29,7 +29,7 @@ module.exports = function chaiWeb3Bindings(web3) {
       )
     })
 
-    Assertion.addProperty('contract', function addContractPropertyProperty() {
+    Assertion.addMethod('contract', function addContractPropertyProperty() {
       this.assert(
         this._obj.address && web3.isAddress(this._obj.address) && !isZeros(this._obj.address),
         'expected #{this} to be a contract',

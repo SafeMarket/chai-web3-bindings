@@ -20,16 +20,16 @@ chai.use(require('chai-web3-bindings')(web3))
 ```
 
 ### hex
-`expect('0x000').to.be.hex`
+`expect('0x000').to.be.hex()`
 
 ### address
-`expect(web3.eth.account).to.be.an.address`
+`expect(web3.eth.account).to.be.an.address()`
 
 ### zeros
-`expect('0x0000').to.be.zeros`
+`expect('0x0000').to.be.zeros()`
 
 ### contract
-`expect(web3.eth.contract(abi)).to.be.a.contract`
+`expect(web3.eth.contract(abi)).to.be.a.contract()`
 
 ### ascii
 `expect('0x74657374').to.be.ascii('test')`
