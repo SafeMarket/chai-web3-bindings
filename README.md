@@ -16,7 +16,7 @@ $ npm i chai-web3-bindings --save-dev
 const chai = require('chai')
 const Web3 = require('web3')
 const web3 = new Web3
-chai.use(require('chai-web3-bindings')(web3))
+chai.use(require('chai-web3-bindings'))
 ```
 
 ### hex
